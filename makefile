@@ -149,13 +149,13 @@ DEPS := $(ALLOBJS:%o=%d)
 
 # default to no ccache
 CCACHE ?= 
-CC := $(CCACHE) $(TOOLCHAIN_PREFIX)gcc
-LD := $(TOOLCHAIN_PREFIX)ld
-OBJDUMP := $(TOOLCHAIN_PREFIX)objdump
-OBJCOPY := $(TOOLCHAIN_PREFIX)objcopy
-CPPFILT := $(TOOLCHAIN_PREFIX)c++filt
-SIZE := $(TOOLCHAIN_PREFIX)size
-NM := $(TOOLCHAIN_PREFIX)nm
+CC ?= $(CCACHE) $(TOOLCHAIN_PREFIX)gcc
+LD ?= $(TOOLCHAIN_PREFIX)ld
+OBJDUMP ?= $(TOOLCHAIN_PREFIX)objdump
+OBJCOPY ?= $(TOOLCHAIN_PREFIX)objcopy
+CPPFILT ?= $(TOOLCHAIN_PREFIX)c++filt
+SIZE ?= $(TOOLCHAIN_PREFIX)size
+NM ?= $(TOOLCHAIN_PREFIX)nm
 
 # comment out or override if you want to see the full output of each command
 NOECHO ?= @
